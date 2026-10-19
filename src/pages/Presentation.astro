@@ -1,24 +1,31 @@
 <presentation>
     <img class="pp" src="../../public/profile_picture.avif"/>
-    <span class="pdescription"> Hello friends </span>
+    <span class="pdescription">
+        Hello friends ! Alors C'est Charles NGUYEN
+        <p>Et je suis étudiant à Epitech en 3e année !</p>
+        <p>Je suis spécialisé en site Web et en IA.</p>
+        <p>N'hésitez pas à me contacter ^O^ hihihihi</p>
+    </span>
 </presentation>
 
 <style>
     presentation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 200px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        min-height: 100vh;
+        min-width: 100vw;
 
-        margin-top: 280px; /*espace min*/
-        margin-bottom: 100px;
+        margin-top: 240px; /*espace min*/
+        margin-bottom: 280px;
     }
     .pdescription {
         color: rgba(255,255,255);
         font-size: 25px;
+        justify-self: center;
     }
     .pp {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 400px;
+        justify-self: center;
     }
-</style>    
+</style>
