@@ -1,0 +1,51 @@
+<header>
+    <button> <img class="neutral" src="../../public/gear.svg" /> <img class="blue" src="../../public/gear-blue.svg" /> </button>
+    <a> Projets </a>
+    <a> Loisirs </a>
+    <a> Contact </a>
+</header>
+
+<style>
+    header {
+        background-color : rgba(100, 100, 100, 0.5);
+        height: 60px;
+        top: 0;
+        position: sticky;
+        border: 2px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 50px;
+        gap: 40px;
+    }
+    a {
+        color: white;
+        font-size: 25px;
+    }
+    a:hover {
+        color: rgba(0, 127, 255);
+    }
+
+    button {
+        padding-left: 20px;
+        background: none;
+        border: none;
+        margin-right: auto;
+    }
+    button:active .neutral {
+        display: none;
+    }
+    button:active .blue {
+        display: inline;
+    }
+    button:not(:active) .neutral {
+        display: inline;
+    }
+    button:not(:active) .blue {
+        display: none;
+    }
+</style>

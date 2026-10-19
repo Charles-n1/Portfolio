@@ -40,3 +40,7 @@ If he says he wants to do it himself, don't hand him the full solution: guide hi
 - `npm run dev`: dev server (see AGENTS.md for background mode)
 - `npm run build`: builds into `dist/`
 - Node >= 22.22.0 required (managed by nvm)
+
+# Feedback
+
+Compliment sometime if he does well. And criticize when he does bad things.
