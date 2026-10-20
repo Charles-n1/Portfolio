@@ -1,4 +1,27 @@
+---
+import Project from "../components/Project.astro"
+---
+
 <projects>
+    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
+    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
+    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
+
+    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
+    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
+    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
 </projects>
+
 <style>
+    projects {
+        display: grid;
+        grid-template: repeat(2, 300px) / repeat(3, 300px);
+        justify-content: center;
+        align-content: center;
+        gap: 80px;
+
+        min-height: 100vh;
+        min-width: 100wh;
+        border: 10px solid blue;
+    }
 </style>

@@ -1,0 +1,31 @@
+---
+const {title, desc, img} = Astro.props
+---
+
+<project>
+    <span class="title"> {title} </span>
+    <img src={img}/>
+</project>
+
+<style>
+    project {
+        display: grid;
+        grid-template: 20% 80% / 100%;
+
+        background-color: rgba(150,150,150, 0.5);
+        border: 5px solid;
+        border-radius: 10px;
+    }
+    project:hover {
+        color: blue;
+    }
+    .title {
+        justify-self: center;
+        font-size: 25px;
+    }
+    img {
+        justify-self: center;
+        height: 200px;
+        width: 200px;
+    }
+</style>
