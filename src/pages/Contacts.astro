@@ -1,4 +1,44 @@
+---
+import Rs from "../components/Rs.astro"
+---
+
 <contacts>
+    <div class="txt">hello</div>
+    <div class="list">
+        <Rs src="../../public/gear.svg" link="https://agar.io"/>
+        <Rs src="../../public/gear.svg" link="https://diep.io"/>
+        <Rs src="../../public/gear.svg" link="https://moomoo.io"/>
+        <Rs src="../../public/gear.svg" link="https://slither.io"/>
+    </div>
+    <div class="txt"> don't forget !</div>
 </contacts>
+
 <style>
+    contacts {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+
+        min-height: 30vh;
+        max-width: 100vw;
+        border: 10px solid yellow;
+    }
+    .list {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr 1fr;
+        min-width: 35vw;
+        min-height: 15vh;
+
+        justify-items: center;
+        align-items: center;
+        border: 10px solid black;
+    }
+    .txt {
+        font-size: 35px;
+    }
+    .txt:hover {
+        color: blue;
+    }
 </style>

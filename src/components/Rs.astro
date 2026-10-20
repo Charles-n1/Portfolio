@@ -1,0 +1,19 @@
+---
+const {src, link} = Astro.props;
+---
+
+<rs>
+    <a href={link} target="_blank">
+        <img src={src}/>
+    </a>
+</rs>
+
+<style>
+    .rs:active {
+        color: rgba(0, 127, 255);
+    }
+    img {
+        height: 60px;
+        width: 60px;
+    }
+</style>

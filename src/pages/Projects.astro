@@ -10,6 +10,7 @@ import Project from "../components/Project.astro"
     <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
     <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
     <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" />
+    <button>See more projects</button>
 </projects>
 
 <style>
@@ -20,8 +21,16 @@ import Project from "../components/Project.astro"
         align-content: center;
         gap: 80px;
 
-        min-height: 100vh;
+        min-height: 110vh;
         min-width: 100wh;
         border: 10px solid blue;
+    }
+    button {
+        border: none;
+        background: none;
+        font-size: 25px;
+    }
+    button:hover {
+        color: rgba(0,127, 255);
     }
 </style>

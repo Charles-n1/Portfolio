@@ -1,4 +1,51 @@
 <loisirs>
+    <div class="mtitle"> D'autres loisirs: </div>
+    <div class="list">
+        <div class="title">∘ Vtuber</div> <img class="vtu" src="../../public/gear.svg">
+        <div class="title">∘ Mario Kart Speedrunner</div> <img class="mk8" src="../../public/gear.svg">
+        <div class="title">∘ Minecraft</div> <img class="mine" src="../../public/gear.svg">
+    </div>
 </loisirs>
+
 <style>
+    loisirs {
+        display: grid;
+        align-content: center;
+
+        min-height: 100vh;
+        min-width: 100wh;
+        font-size: 55px;
+        border: 10px solid green;
+    }
+    .list {
+        display: grid;
+        grid-template: repeat(3, 120px) / 750px 100px ;
+        max-width: 100vw;
+        justify-content: center;
+        align-items: center;
+
+        border: 10px solid pink;
+    }
+    .mtitle {
+        margin-left: 300px;      /* un peu à droite : ajuste la valeur */
+        margin-bottom: 40px;
+    }
+    .mtitle:hover {
+        color: rgba(0, 127, 255);
+    }
+    .title:hover {
+        color: rgba(0, 127, 255);
+    }
+    .title {
+        ;
+    }
+    .mine {
+        height: 60px;
+    }
+    .vtu {
+        height: 60px;
+    }
+    .mk8 {
+        height: 60px;
+    }
 </style>
