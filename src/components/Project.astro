@@ -1,10 +1,16 @@
 ---
-const {title, desc, img} = Astro.props
+const {title, desc, img, link} = Astro.props
 ---
 
 <project>
     <span class="title"> {title} </span>
-    <img src={img}/>
+    <img class="imgg" src={img}/>
+    <div class="detail">
+        <span class="dtitle">{title}</span>
+        <img class="dimg" src={img}/>
+        <span class="ddesc">{desc}</span>
+        <a class="dlink" href={link}>More detail</a>
+    </div>
 </project>
 
 <style>
@@ -15,17 +21,60 @@ const {title, desc, img} = Astro.props
         background-color: rgba(150,150,150, 0.5);
         border: 5px solid;
         border-radius: 10px;
+        position: relative;
+    }
+    .detail {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 180%;
+        height: 180%;
+        background-color: gray;
+        border: 5px solid black;
+        border-radius: 10px;
+        z-index: 1;
+
+        grid-template-rows: auto 100px auto;
+        justify-items: center;
+        align-content: start;
+    }
+    project:not(:hover) {
+        .detail {
+            display: none;
+        }
     }
     project:hover {
-        color: blue;
+        .detail {
+            display: grid;
+        }
     }
     .title {
         justify-self: center;
         font-size: 25px;
     }
-    img {
+    .imgg {
         justify-self: center;
         height: 200px;
         width: 200px;
+    }
+    .dtitle {
+        font-size: 25px;
+    }
+    .dimg {
+        height: 100px;
+        width: 100px;
+    }
+    .ddesc {
+        font-size: 20px;
+    }
+    .dlink {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 20px;
+        color: black;
+    }
+    .dlink:hover {
+        color: rgba(0, 127, 255);
     }
 </style>

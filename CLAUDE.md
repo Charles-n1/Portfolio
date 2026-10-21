@@ -23,6 +23,7 @@ Charles decides **what** to build and **how**. You execute, explain, and flag pr
 - Make the smallest, most readable change possible. No "just in case" code.
 - No large rewrites unless asked.
 - Diagrams: use comparisons or diagrams to explain things. Draw examples from the world of VTubing or gaming.
+- **Start with the simplest solution that works for this specific case.** Only bring up the general/robust version if the simple one has a real limitation here, and say what that limitation is. Don't add steps "just in case".
 
 ### After coding
 
