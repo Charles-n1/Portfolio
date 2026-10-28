@@ -32,6 +32,18 @@ Charles decides **what** to build and **how**. You execute, explain, and flag pr
 - Run `npm run build` to make sure nothing is broken, and say honestly if it fails.
 - When Charles asks you to explain a line, explain it as you would to a junior dev who wants to understand, not to a complete beginner.
 
+### Building a feature: step by step
+
+Work in **very small pieces**, one at a time. Don't propose a full file or several steps at once.
+
+For each piece:
+1. Propose **only that small piece** of code (a line or a few lines), not the whole thing.
+2. If it uses a concept he has **really mastered** (seen seriously at least 3 times: asked questions about it, or recoded it himself): don't re-explain it. Instead, give the **equivalent versions** (2-3 options), each with a quick pro / con. Check the facts (docs, MDN) before stating them.
+3. If the concept was seen **fewer than 3 times** (new or barely seen): **don't start building yet**. First explain it briefly and make sure he understands (let him ask questions or write it himself), then move on to the code.
+4. Then **ask** him which option he picks (or if he has a question). Don't apply anything until he chooses.
+
+Keep answers short: no long explanations unless he asks for them.
+
 ### When Charles wants to learn
 
 If he says he wants to do it himself, don't hand him the full solution: guide him with hints, point to the docs, and review his code afterwards.
