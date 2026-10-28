@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Vagues fluides superposées -->
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0d55bd" />
+            <stop offset="1" stop-color="#0a3d8f" />
+        </linearGradient>
+        <linearGradient id="w1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0c3c86" />
+            <stop offset="1" stop-color="#072b66" />
+        </linearGradient>
+        <linearGradient id="w2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2a8ef0" />
+            <stop offset="1" stop-color="#1166d0" />
+        </linearGradient>
+        <clipPath id="clip"><rect width="400" height="120" /></clipPath>
+    </defs>
+    <g clip-path="url(#clip)">
+        <rect width="400" height="120" fill="url(#bg)" />
+        <path d="M0 70 C80 40 140 100 220 70 S340 30 400 60 V120 H0 Z" fill="url(#w2)" />
+        <path d="M0 85 C90 60 150 115 240 88 S350 55 400 80 V120 H0 Z" fill="url(#w1)" />
+        <path d="M0 100 C100 85 170 120 260 102 S360 85 400 98 V120 H0 Z" fill="#061f4a" />
+        <path d="M0 70 C80 40 140 100 220 70 S340 30 400 60" fill="none" stroke="#b8f2ff" stroke-width="1.5" />
+        <path d="M0 40 C90 20 160 60 250 35 S360 10 400 25" fill="none" stroke="#6cbcff" stroke-width="2" />
+    </g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+    <defs>
+        <!-- Tout en bleu : fond bleu, panneaux bleu nuit, barres bleu clair -->
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0b4aa8" />
+            <stop offset="1" stop-color="#082e6e" />
+        </linearGradient>
+        <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0c3c86" />
+            <stop offset="1" stop-color="#061f4a" />
+        </linearGradient>
+        <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#5fb0ff" stop-opacity="0" />
+            <stop offset="0.5" stop-color="#6cbcff" stop-opacity="1" />
+            <stop offset="1" stop-color="#5fb0ff" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8ae8ff" stop-opacity="0" />
+            <stop offset="0.5" stop-color="#b8f2ff" stop-opacity="1" />
+            <stop offset="1" stop-color="#8ae8ff" stop-opacity="0" />
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
+            <feGaussianBlur stdDeviation="2" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+        <filter id="shadow" x="-10%" y="-50%" width="120%" height="200%">
+            <feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#020a1c" flood-opacity="0.7" />
+        </filter>
+        <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="#9fd0ff" fill-opacity="0.6" />
+        </pattern>
+        <radialGradient id="dotsFade" cx="0.15" cy="0.15" r="0.3">
+            <stop offset="0" stop-color="#fff" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </radialGradient>
+        <mask id="dotsMask"><rect width="300" height="300" fill="url(#dotsFade)" /></mask>
+        <clipPath id="clip"><rect width="300" height="300" /></clipPath>
+    </defs>
+
+    <g clip-path="url(#clip)">
+        <rect width="300" height="300" fill="url(#bg)" />
+        <rect width="300" height="300" fill="url(#dots)" mask="url(#dotsMask)" />
+
+        <g transform="rotate(35 150 150)">
+            <g filter="url(#shadow)">
+                <rect x="20" y="60" width="320" height="40" fill="url(#panel)" />
+                <rect x="-60" y="190" width="300" height="34" fill="url(#panel)" />
+            </g>
+            <g filter="url(#glow)">
+                <rect x="40" y="104" width="280" height="8" fill="url(#bar)" />
+                <rect x="-30" y="180" width="270" height="6" fill="url(#bar)" />
+                <rect x="80" y="140" width="220" height="2" fill="url(#cyan)" />
+                <rect x="-20" y="232" width="240" height="1.5" fill="url(#cyan)" opacity="0.8" />
+            </g>
+        </g>
+    </g>
+</svg>

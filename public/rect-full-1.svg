@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Inspiré de rect-blue.svg (faisceaux), tout en bleu et opaque -->
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0a3d8f" />
+            <stop offset="1" stop-color="#0d55bd" />
+        </linearGradient>
+        <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#3d9bff" stop-opacity="0.6" />
+            <stop offset="0.5" stop-color="#6cbcff" stop-opacity="1" />
+            <stop offset="1" stop-color="#3d9bff" stop-opacity="0.6" />
+        </linearGradient>
+        <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#072b66" />
+            <stop offset="1" stop-color="#0a3a85" />
+        </linearGradient>
+        <clipPath id="clip"><rect width="400" height="120" /></clipPath>
+    </defs>
+    <g clip-path="url(#clip)">
+        <rect width="400" height="120" fill="url(#bg)" />
+        <g transform="rotate(35 200 60)">
+            <rect x="-80" y="20" width="560" height="22" fill="url(#panel)" />
+            <rect x="-40" y="78" width="520" height="30" fill="url(#panel)" />
+            <rect x="-60" y="10" width="420" height="4" fill="url(#beam)" />
+            <rect x="40" y="48" width="460" height="7" fill="url(#beam)" />
+            <rect x="-20" y="96" width="380" height="5" fill="url(#beam)" />
+            <rect x="20" y="34" width="360" height="1.5" fill="#b8f2ff" />
+            <rect x="140" y="66" width="300" height="2" fill="#b8f2ff" />
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Inspiré de rect-blue-4.svg (panneaux en relief), tout en bleu et opaque -->
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0d55bd" />
+            <stop offset="1" stop-color="#0a3d8f" />
+        </linearGradient>
+        <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0c3c86" />
+            <stop offset="1" stop-color="#061f4a" />
+        </linearGradient>
+        <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#3d9bff" stop-opacity="0.7" />
+            <stop offset="0.5" stop-color="#6cbcff" stop-opacity="1" />
+            <stop offset="1" stop-color="#3d9bff" stop-opacity="0.7" />
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-50%" width="120%" height="200%">
+            <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#020a1c" flood-opacity="0.7" />
+        </filter>
+        <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="#9fd0ff" />
+        </pattern>
+        <clipPath id="clip"><rect width="400" height="120" /></clipPath>
+        <clipPath id="dotsArea"><rect x="0" y="0" width="90" height="45" /></clipPath>
+    </defs>
+    <g clip-path="url(#clip)">
+        <rect width="400" height="120" fill="url(#bg)" />
+        <rect width="400" height="120" fill="url(#dots)" clip-path="url(#dotsArea)" opacity="0.7" />
+        <g transform="rotate(35 200 60)">
+            <g filter="url(#shadow)">
+                <rect x="40" y="10" width="360" height="26" fill="url(#panel)" />
+                <rect x="-40" y="86" width="340" height="22" fill="url(#panel)" />
+            </g>
+            <rect x="60" y="36" width="320" height="6" fill="url(#bar)" />
+            <rect x="-20" y="80" width="300" height="5" fill="url(#bar)" />
+            <rect x="120" y="58" width="240" height="1.5" fill="#b8f2ff" />
+            <rect x="0" y="112" width="260" height="1.2" fill="#b8f2ff" />
+        </g>
+    </g>
+</svg>

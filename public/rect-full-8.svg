@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Chevrons « >>> » en rafale -->
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#083a85" />
+            <stop offset="1" stop-color="#0d55bd" />
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="3" dy="2" stdDeviation="2" flood-color="#020a1c" flood-opacity="0.6" />
+        </filter>
+        <clipPath id="clip"><rect width="400" height="120" /></clipPath>
+    </defs>
+    <g clip-path="url(#clip)">
+        <rect width="400" height="120" fill="url(#bg)" />
+        <g fill="none" stroke-linejoin="miter" filter="url(#shadow)">
+            <polyline points="150,20 190,60 150,100" stroke="#072b66" stroke-width="12" />
+            <polyline points="185,20 225,60 185,100" stroke="#1166d0" stroke-width="12" />
+            <polyline points="220,20 260,60 220,100" stroke="#3d9bff" stroke-width="12" />
+            <polyline points="255,20 295,60 255,100" stroke="#6cbcff" stroke-width="12" />
+        </g>
+        <rect x="0" y="58" width="140" height="4" fill="#6cbcff" />
+        <rect x="0" y="50" width="100" height="2" fill="#b8f2ff" />
+        <rect x="0" y="68" width="120" height="2" fill="#072b66" />
+        <rect x="310" y="58" width="90" height="4" fill="#072b66" />
+    </g>
+</svg>
