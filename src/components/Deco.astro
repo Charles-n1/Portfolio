@@ -2,12 +2,12 @@
 const { src, top, bottom, left, right, width, height, rotate } = Astro.props;
 ---
 
-<span class="deco">
-
-</span>
+<deco>
+    <img class="deco" src={src} style={{top, bottom, left, right, width, height, rotate}}/>
+</deco>
 
 <style>
     .deco {
-        
+        position: absolute;
     }
 </style>

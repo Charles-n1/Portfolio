@@ -44,6 +44,13 @@ For each piece:
 
 Keep answers short: no long explanations unless he asks for them.
 
+### Verify before stating
+
+- **Research before giving technical facts** (how a property behaves, browser support, how Astro handles something). Don't answer from memory when unsure.
+- Best sources, in order: the project's own code in `node_modules` (exact installed version), the official docs (Astro, MDN), then caniuse for browser support.
+- Cite the source in the answer (link or file path).
+- If something said earlier turns out to be wrong or incomplete, say so plainly and correct it.
+
 ### When Charles wants to learn
 
 If he says he wants to do it himself, don't hand him the full solution: guide him with hints, point to the docs, and review his code afterwards.

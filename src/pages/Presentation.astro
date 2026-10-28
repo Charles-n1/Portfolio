@@ -1,19 +1,26 @@
 ---
 import Lettre from "../components/Lettre.astro"
+import Deco from "../components/Deco.astro"
 ---
 
 <presentation id="idpres">
-    <img class="pp" src="../../public/profile_picture.avif"/>
-    <span class="pdescription">
-        <Lettre input="Hello friends ! Alors C'est Charles NGUYEN"/>
-        <p><Lettre input="Et je suis étudiant à Epitech en 3e année !"/></p>
-        <p><Lettre input="Je suis spécialisé en site Web et en IA."/></p>
-        <p><Lettre input="N'hésitez pas à me contacter ^O^ hihihihi"/></p>
-    </span>
+    <Deco src="/rect_1.svg" top="60px" left="-100px" width="450px" height="135px" rotate="-35deg" />
+    <content>
+        <img class="pp" src="../../public/profile_picture.avif"/>
+        <span class="pdescription">
+            <Lettre input="Hello friends ! Alors C'est Charles NGUYEN"/>
+            <p><Lettre input="Et je suis étudiant à Epitech en 3e année !"/></p>
+            <p><Lettre input="Je suis spécialisé en site Web et en IA."/></p>
+            <p><Lettre input="N'hésitez pas à me contacter ^O^ hihihihi"/></p>
+        </span>
+    </content>
 </presentation>
 
 <style>
     presentation {
+        ;
+    }
+    content {
         display: grid;
         grid-template-columns: 50% 50%;
         min-height: 50vh;
