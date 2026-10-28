@@ -1,8 +1,8 @@
 ---
-const {title, desc, img, link} = Astro.props
+const {title, desc, img, link, class: classname} = Astro.props
 ---
 
-<project>
+<project class={classname}>
     <span class="title"> {title} </span>
     <img class="imgg" src={img}/>
     <div class="detail">

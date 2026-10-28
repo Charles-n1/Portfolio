@@ -13,11 +13,9 @@ import Project from "../components/Project.astro"
         <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
         <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://agar.io" />
 
-        <span class="extra">
-            <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
-            <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
-            <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
-        </span>
+        <Project class="extra" title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+        <Project class="extra" title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+        <Project class="extra" title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
     </span>
     <details>
         <summary>
@@ -32,6 +30,7 @@ import Project from "../components/Project.astro"
         grid-template: auto auto auto / auto;
         border: 10px solid pink;
         justify-content: center;
+        gap: 40px;
     }
     projects:has(details[open]) {
         .extra {
@@ -45,7 +44,8 @@ import Project from "../components/Project.astro"
     }
     .list {
         display: grid;
-        grid-template: repeat(2, 300px) / repeat(3, 300px);
+        grid-template-columns: repeat(3, 300px);   /* seulement les colonnes */
+        grid-auto-rows: 300px;
         justify-content: center;
         align-content: center;
         gap: 80px;
@@ -64,6 +64,7 @@ import Project from "../components/Project.astro"
     }
     details {
         justify-self: center;
+        font-size: 40px;
     }
     .mtitle {
         font-size: 55px;
