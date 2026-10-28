@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 360" width="830" height="360">
+    <!-- Éclair : une barre blanche épaisse en zig-zag, avec un fin contour gris -->
+    <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+        <!-- contour gris : un trait un peu plus épais, dessiné dessous -->
+        <polyline points="20,335 300,168 467,231 811,20" stroke="rgb(140, 140, 140)" stroke-width="28" />
+        <!-- barre blanche par-dessus -->
+        <polyline points="20,335 300,168 467,231 811,20" stroke="#ffffff" stroke-width="24" />
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 360" width="830" height="360">
+    <!-- Éclair fin : même forme que eclair.svg, barre blanche et contour gris plus fins -->
+    <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+        <polyline points="20,335 300,168 467,231 811,20" stroke="rgb(140, 140, 140)" stroke-width="16" />
+        <polyline points="20,335 300,168 467,231 811,20" stroke="#ffffff" stroke-width="14" />
+    </g>
+</svg>
