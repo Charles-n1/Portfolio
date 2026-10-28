@@ -3,25 +3,54 @@ import Project from "../components/Project.astro"
 ---
 
 <projects id="idproj">
-    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
-    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://agar.io" />
-    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://slither.io" />
+    <span class="mtitle"> Mes projets </span>
+    <span class="list">
+        <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+        <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://agar.io" />
+        <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://slither.io" />
 
-    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://moomoo.io" />
-    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
-    <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://agar.io" />
-    <button>See more projects</button>
+        <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://moomoo.io" />
+        <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+        <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://agar.io" />
+
+        <span class="extra">
+            <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+            <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+            <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+        </span>
+    </span>
+    <details>
+        <summary>
+            See more projects
+        </summary>
+    </details>
 </projects>
 
 <style>
     projects {
+        display: grid;
+        grid-template: auto auto auto / auto;
+        border: 10px solid pink;
+        justify-content: center;
+    }
+    projects:has(details[open]) {
+        .extra {
+            display: grid;
+        }
+    }
+    projects:has(details:not([open])) {
+        .extra {
+            display: none;
+        }
+    }
+    .list {
         display: grid;
         grid-template: repeat(2, 300px) / repeat(3, 300px);
         justify-content: center;
         align-content: center;
         gap: 80px;
 
-        min-height: 110vh;
+        min-height: 80vh;
         min-width: 100wh;
         border: 10px solid blue;
     }
@@ -32,5 +61,12 @@ import Project from "../components/Project.astro"
     }
     button:hover {
         color: rgba(0,127, 255);
+    }
+    details {
+        justify-self: center;
+    }
+    .mtitle {
+        font-size: 55px;
+        margin-left: -110px;
     }
 </style>
