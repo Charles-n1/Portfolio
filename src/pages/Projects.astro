@@ -39,16 +39,13 @@ import Deco from "../components/Deco.astro"
         justify-content: center;
         gap: 40px;
 
-        --list-len-opened: 0px;
     }
-    projects:has(details[open]) {
-        --list-len-opened: 266px;
+    body:has(#idproj details[open]) {
         .extra {
             display: grid;
         }
     }
-    projects:has(details:not([open])) {
-        --list-len-opened: 0px;
+    body:has(#idproj details:not([open])) {
         .extra {
             display: none;
         }

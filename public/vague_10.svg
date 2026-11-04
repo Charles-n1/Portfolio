@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430 220" width="1430" height="220">
+    <!-- Vague dessinée sur Excalidraw, lissée : ruban blanc, contour bleu azur, léger halo et reflet — fond transparent -->
+    <defs>
+        <filter id="halo" x="-5%" y="-50%" width="110%" height="200%">
+            <feGaussianBlur stdDeviation="7" />
+        </filter>
+    </defs>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Halo bleu azur, flou, derrière -->
+        <path d="M22,60 C135.4,60 178.6,154 292,154 C407.5,154 451.5,67 567,67 C672.0,67 712.0,159 817,159 C930.4,159 973.6,56 1087,56 C1177.3,56 1211.7,126 1302,126 C1346.5,126 1363.5,66 1408,66" stroke="#007FFF" stroke-width="46" opacity="0.35" filter="url(#halo)" />
+        <!-- Contour bleu azur -->
+        <path d="M22,60 C135.4,60 178.6,154 292,154 C407.5,154 451.5,67 567,67 C672.0,67 712.0,159 817,159 C930.4,159 973.6,56 1087,56 C1177.3,56 1211.7,126 1302,126 C1346.5,126 1363.5,66 1408,66" stroke="#007FFF" stroke-width="39" />
+        <!-- Ruban blanc -->
+        <path d="M22,60 C135.4,60 178.6,154 292,154 C407.5,154 451.5,67 567,67 C672.0,67 712.0,159 817,159 C930.4,159 973.6,56 1087,56 C1177.3,56 1211.7,126 1302,126 C1346.5,126 1363.5,66 1408,66" stroke="#ffffff" stroke-width="27" />
+        <!-- Reflet bleu très clair, un peu au-dessus du centre -->
+        <path d="M22,60 C135.4,60 178.6,154 292,154 C407.5,154 451.5,67 567,67 C672.0,67 712.0,159 817,159 C930.4,159 973.6,56 1087,56 C1177.3,56 1211.7,126 1302,126 C1346.5,126 1363.5,66 1408,66" stroke="#d3eaff" stroke-width="4" transform="translate(0 -6)" />
+    </g>
+</svg>
