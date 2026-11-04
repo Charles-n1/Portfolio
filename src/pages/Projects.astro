@@ -8,6 +8,7 @@ import Deco from "../components/Deco.astro"
     <Deco src="/rect_w5.svg" top="1404px" left="1163px" width="1012.5px" height="40.5px" rotate="-35deg"/>
     <Deco src="/rect_12.svg" top="1490px" left="917.5px" width="570px" height="300px" rotate="-35deg"/>
     <Deco src="/rect_11.svg" top="1640px" left="930.5px" width="570px" height="300px" rotate="-35deg"/>
+    <Deco src="/eclair_6.svg" top="calc(var(--list-len-opened) + 1462px + 50vh)" left="-15%" width="130%" rotate="-4deg"/>
     <span class="mtitle"> Mes projets </span>
     <span class="list">
         <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
@@ -19,7 +20,7 @@ import Deco from "../components/Deco.astro"
         <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://agar.io" />
 
         <Project class="extra" title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
-        <Project class="extra" title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
+        <Project class="extra" title="zappy" desc="zap zapet zappy !!" img="../../public/gear.svg" link="https://diep.io" />
         <Project class="extra" title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
     </span>
     <details>
@@ -36,13 +37,17 @@ import Deco from "../components/Deco.astro"
         border: 10px solid pink;
         justify-content: center;
         gap: 40px;
+
+        --list-len-opened: 0px;
     }
     projects:has(details[open]) {
+        --list-len-opened: 266px;
         .extra {
             display: grid;
         }
     }
     projects:has(details:not([open])) {
+        --list-len-opened: 0px;
         .extra {
             display: none;
         }
@@ -70,6 +75,7 @@ import Deco from "../components/Deco.astro"
     details {
         justify-self: center;
         font-size: 40px;
+        margin-bottom: 280px;
     }
     .mtitle {
         font-size: 55px;

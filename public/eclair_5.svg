@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776 245" width="776" height="245">
+    <!-- Éclair fin : forme dessinée sur Excalidraw, même style que eclair_3.svg -->
+    <g fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+        <polyline points="20,20 476,225 524,106 756,210" stroke="rgb(140, 140, 140)" stroke-width="16" />
+        <polyline points="20,20 476,225 524,106 756,210" stroke="#ffffff" stroke-width="14" />
+    </g>
+</svg>
