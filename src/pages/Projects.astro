@@ -8,8 +8,8 @@ import Deco from "../components/Deco.astro"
     <Deco src="/rect_w5.svg" top="1404px" left="1163px" width="1012.5px" height="40.5px" rotate="-35deg"/>
     <Deco src="/rect_12.svg" top="1490px" left="917.5px" width="570px" height="300px" rotate="-35deg"/>
     <Deco src="/rect_11.svg" top="1640px" left="930.5px" width="570px" height="300px" rotate="-35deg"/>
-    <Deco src="/eclair_6.svg" top="calc(var(--list-len-opened) + 1582px + 50vh)" left="-15%" width="130%" rotate="2deg"/>
-    <Deco src="/rect_14.svg" top="calc(var(--list-len-opened) + 2280px)" left="-130.5px" width="570px" height="300px" rotate="-33deg"/>
+    <Deco src="/eclair_7.svg" top="calc(var(--list-len-opened) + 1582px + 50vh)" left="-15%" width="130%" rotate="2deg"/>
+    <Deco src="/rect_24_eclair7.svg" top="calc(var(--list-len-opened) + 2280px)" left="-130.5px" width="570px" height="300px" rotate="-33deg"/>
     <span class="mtitle"> Mes projets </span>
     <span class="list">
         <Project title="zappy" desc="zap zap zappy !!" img="../../public/gear.svg" link="https://diep.io" />
@@ -78,8 +78,14 @@ import Deco from "../components/Deco.astro"
         font-size: 40px;
         margin-bottom: 370px;
     }
+    details:hover {
+        color: rgba(0,127, 255);
+    }
     .mtitle {
         font-size: 55px;
         margin-left: -110px;
+    }
+    .mtitle:hover {
+        color: rgba(0,127, 255);
     }
 </style>
