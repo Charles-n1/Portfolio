@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 60" width="800" height="60">
+    <!-- Séparateur : une seule ligne ondulée blanche — fond transparent -->
+    <defs><clipPath id="clip"><rect width="800" height="60" /></clipPath></defs>
+    <g clip-path="url(#clip)" fill="none" stroke-linecap="round">
+        <path d="M-100,30 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0 q25,-12 50,0 t50,0" stroke="#ffffff" stroke-width="3" />
+    </g>
+</svg>
