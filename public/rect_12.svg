@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Panneaux inclinés empilés, style menu de jeu -->
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0a3d8f" />
+            <stop offset="1" stop-color="#0d55bd" />
+        </linearGradient>
+        <clipPath id="clip"><rect width="400" height="120" /></clipPath>
+        <linearGradient id="slabA" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#1166d0" />
+            <stop offset="1" stop-color="#1e7fff" />
+        </linearGradient>
+        <linearGradient id="slabB" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#082a63" />
+            <stop offset="1" stop-color="#0b4aa8" />
+        </linearGradient>
+        <linearGradient id="slabC" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2a8ef0" />
+            <stop offset="1" stop-color="#5fb0ff" />
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-30%" width="120%" height="160%">
+            <feDropShadow dx="-4" dy="0" stdDeviation="3" flood-color="#020a1c" flood-opacity="0.55" />
+        </filter>
+    </defs>
+
+    <g clip-path="url(#clip)">
+        <rect width="400" height="120" fill="url(#bg)" />
+
+        <!-- Panneaux (parallélogrammes), du fond vers l'avant -->
+        <g filter="url(#shadow)">
+            <polygon points="150,0 400,0 400,120 110,120" fill="url(#slabB)" />
+            <polygon points="230,0 400,0 400,120 190,120" fill="url(#slabA)" />
+            <polygon points="300,0 400,0 400,120 260,120" fill="url(#slabB)" />
+            <polygon points="345,0 400,0 400,120 305,120" fill="url(#slabC)" />
+        </g>
+
+        <!-- Arêtes lumineuses sur les bords gauches -->
+        <g stroke="#8ae8ff" stroke-width="2">
+            <line x1="230" y1="0" x2="190" y2="120" />
+            <line x1="345" y1="0" x2="305" y2="120" />
+        </g>
+
+        <!-- Petit bandeau à gauche -->
+        <polygon points="20,88 120,88 114,100 14,100" fill="#082a63" />
+        <polygon points="20,88 60,88 54,100 14,100" fill="#5fb0ff" />
+    </g>
+</svg>

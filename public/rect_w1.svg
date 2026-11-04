@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120" preserveAspectRatio="none">
+    <!-- Version blanche de rect_b1 (faisceaux) -->
+    <defs>
+        <!-- Fond : blanc cassé vers gris perle -->
+        <linearGradient id="fill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f7f8fa" />
+            <stop offset="0.6" stop-color="#e9ebee" />
+            <stop offset="1" stop-color="#d6dae0" />
+        </linearGradient>
+
+        <!-- Faisceaux : transparents aux bouts, lumineux au centre -->
+        <linearGradient id="beamWhite" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0" />
+            <stop offset="0.5" stop-color="#ffffff" stop-opacity="1" />
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="beamGrey" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#9fa6b0" stop-opacity="0" />
+            <stop offset="0.5" stop-color="#9fa6b0" stop-opacity="1" />
+            <stop offset="1" stop-color="#9fa6b0" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0" />
+            <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.6" />
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+        </linearGradient>
+
+        <!-- Ombre grise douce pour détacher le blanc du fond clair -->
+        <filter id="glow" x="-20%" y="-300%" width="140%" height="700%">
+            <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#6b717b" flood-opacity="0.35" />
+        </filter>
+
+        <!-- Texture rocheuse très légère -->
+        <filter id="rock" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="7" result="noise" />
+            <feDiffuseLighting in="noise" lighting-color="#ffffff" surfaceScale="1.5" result="light">
+                <feDistantLight azimuth="45" elevation="55" />
+            </feDiffuseLighting>
+            <feComposite in="light" in2="SourceGraphic" operator="arithmetic" k1="1.1" k2="0" k3="0" k4="0" />
+        </filter>
+
+        <clipPath id="clip">
+            <rect width="400" height="120" />
+        </clipPath>
+    </defs>
+
+    <g clip-path="url(#clip)">
+        <rect width="400" height="120" fill="url(#fill)" filter="url(#rock)" />
+
+        <!-- Faisceaux en diagonale (haut-gauche vers bas-droite) -->
+        <g transform="rotate(35 200 60)">
+            <!-- grands panneaux translucides -->
+            <rect x="-80" y="20" width="560" height="22" fill="url(#panel)" />
+            <rect x="-40" y="78" width="520" height="30" fill="url(#panel)" opacity="0.8" />
+
+            <g filter="url(#glow)">
+                <!-- faisceaux blancs -->
+                <rect x="-60" y="10" width="420" height="4" fill="url(#beamWhite)" />
+                <rect x="40" y="48" width="460" height="7" fill="url(#beamWhite)" />
+                <rect x="-20" y="96" width="380" height="5" fill="url(#beamWhite)" opacity="0.9" />
+                <rect x="120" y="128" width="360" height="9" fill="url(#beamWhite)" opacity="0.7" />
+
+                <!-- fines lignes grises -->
+                <rect x="20" y="34" width="360" height="1.5" fill="url(#beamGrey)" />
+                <rect x="140" y="66" width="300" height="2" fill="url(#beamGrey)" />
+                <rect x="-40" y="114" width="320" height="1.2" fill="url(#beamGrey)" opacity="0.8" />
+            </g>
+        </g>
+    </g>
+
+    <!-- Contour gris comme l'éclair. Le trait est centré sur le bord, donc la moitié
+         dépasse du SVG et est coupée : 4 de large = 2px visibles.
+         non-scaling-stroke : garde 2px partout, même quand le SVG est étiré. -->
+    <rect width="400" height="120" fill="none" stroke="rgb(140, 140, 140)" stroke-width="4" vector-effect="non-scaling-stroke" />
+</svg>
