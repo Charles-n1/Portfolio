@@ -5,18 +5,23 @@ import Deco from "../components/Deco.astro";
 
 <contacts id="idcont">
     <Deco src="/eclair_8.svg" top="calc(var(--list-len-opened) + 3540px)" left="-100px" width="130%" rotate="2deg"/>
-    <div class="txt">hello</div>
-    <div class="list">
-        <Rs src="../../public/gear.svg" link="https://agar.io"/>
-        <Rs src="../../public/gear.svg" link="https://diep.io"/>
-        <Rs src="../../public/gear.svg" link="https://moomoo.io"/>
-        <Rs src="../../public/gear.svg" link="https://slither.io"/>
+    <div class="content">
+        <div class="txt">hello</div>
+        <div class="list">
+            <Rs src="../../public/gear.svg" link="https://agar.io"/>
+            <Rs src="../../public/gear.svg" link="https://diep.io"/>
+            <Rs src="../../public/gear.svg" link="https://moomoo.io"/>
+            <Rs src="../../public/gear.svg" link="https://slither.io"/>
+        </div>
+        <div class="txt"> don't forget !</div>
     </div>
-    <div class="txt"> don't forget !</div>
 </contacts>
 
 <style>
     contacts {
+        ;
+    }
+    .content {
         display: grid;
         grid-template: 1fr / 1fr 1fr 1fr;
         align-content: center;
